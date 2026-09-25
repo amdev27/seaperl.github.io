@@ -2,6 +2,7 @@ import { sitePath } from "@/lib/site-path";
 import type { Metadata } from "next";
 import "./globals.css";
 import { LiveChat } from "@/components/live-chat";
+import { SiteMotion } from "@/components/site-motion";
 
 export const metadata: Metadata = {
   title: "Sea Pearl Biotech | Algae-Based Ingredients and Spirulina Manufacturing",
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}<LiveChat/></body>
+      <body className="antialiased">{children}<SiteMotion/><LiveChat/></body>
     </html>
   );
 }
