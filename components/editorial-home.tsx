@@ -1,6 +1,5 @@
 import { sitePath } from "@/lib/site-path";
-import { PearlHero } from "./pearl-hero";
-import { HeroVideo } from "./hero-video";
+import { HeritageHero, OurBrands } from "./heritage-hero";
 import { CultivationStory, IndustryDepth, CompanyFAQ } from "./company-depth";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
@@ -8,8 +7,8 @@ import { Certifications } from "./certifications";
 import { articles } from "@/lib/journal";
 import { productImage } from "@/lib/products";
 export function EditorialHome(){return <main className="editorial-home"><SiteHeader dark={false}/>
-<section className="home-video-banner" aria-label="Sea Pearl Biotech introduction"><HeroVideo/></section>
-<PearlHero/>
+<HeritageHero/>
+<OurBrands/>
 <section className="section origin-story"><p className="section-label">01 / Our roots</p><div><h2>A living ingredient.<br/>A company built<br/><em>around its potential.</em></h2><div className="story-columns"><p>Founded in March 2016, Sea Pearl Biotech cultivates, manufactures and markets spirulina from Ahmedabad, Gujarat. Our work connects the growing environment to ingredient supply and product development.</p><p>We work with food and beverage businesses, nutraceutical brands, personal-care teams and other industries exploring algae. From raw ingredients to products carrying your own label, the conversation starts with what you want to make.</p></div><a className="text-link" href={sitePath("/about")}>Meet Sea Pearl ↗</a></div><aside><strong>2016</strong><span>Our story begins<br/>in Ahmedabad.</span></aside></section>
 <section className="ingredient-edit section"><div className="edit-heading"><p className="section-label">02 / The ingredient edit</p><h2>Naturally versatile.<br/><em>Precisely selected.</em></h2><a className="text-link" href={sitePath("/ingredients")}>Explore all 15 products ↗</a></div><div className="ingredient-showcase">{[["spirulina","Spirulina","The starting point","Powder, flakes, tablets and more."],["phycocyanin","Phycocyanin","A different shade of algae","Explore the blue pigment in our portfolio."],["astaxanthin","Astaxanthin","Beyond green","Discover our wider algae ingredient range."]].map(([slug,name,label,desc],i)=><a className="ingredient-tile" href={sitePath(`/ingredients/${slug}`)} key={slug}><div className="ingredient-photo"><span>0{i+1}</span><img src={productImage(slug)} alt={name} loading="lazy"/></div><div className="ingredient-caption"><div><p>{label}</p><h3>{name}</h3><p>{desc}</p></div><span>↗</span></div></a>)}</div></section>
 <section className="field-story"><img src={sitePath("/original/PHOTO-2024-07-12-12-50-29-2.jpg")} alt="Spirulina cultivation from the Sea Pearl image library" loading="lazy"/><div><p className="section-label light">03 / From cultivation to collaboration</p><h2>Your idea.<br/>Our experience.<br/><em>Let’s make it grow.</em></h2><p>Build on our work in spirulina cultivation, ingredient supply and white-label manufacturing. We can discuss formulation, packaging and labelling around your product brief.</p><a className="button button-primary" href={sitePath("/manufacturing")}>Explore our services ↗</a></div></section>

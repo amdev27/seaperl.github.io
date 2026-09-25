@@ -12,7 +12,7 @@ export function SiteMotion(){
    cleanup();
    if(preference.matches)return;
    const animations=new Set<Animation>();
-   const targets=Array.from(document.querySelectorAll<HTMLElement>(".origin-story>div,.edit-heading,.depth-heading,.ingredient-tile,.catalog-card,.real-product,.journal-card,.culture-stages article,.value-card,.quality-principles article,.certificate-directory article,.application-grid article,.service-columns article,.industry-list>a,.faq-items details,.service-lines>a,.footer-lead,.about-photo,.shop-feature"));
+   const targets=Array.from(document.querySelectorAll<HTMLElement>(".origin-story>div,.edit-heading,.depth-heading,.ingredient-tile,.catalog-card,.real-product,.journal-card,.culture-stages article,.value-card,.quality-principles article,.certificate-directory article,.application-grid article,.service-columns article,.industry-list>a,.faq-items details,.service-lines>a,.footer-lead,.about-photo,.shop-feature,.owned-brand-card"));
    const observer=new IntersectionObserver(entries=>{
     for(const entry of entries){
      if(!entry.isIntersecting)continue;
@@ -25,10 +25,10 @@ export function SiteMotion(){
     }
    },{threshold:.08});
    targets.forEach(el=>{if(el.getBoundingClientRect().top>=window.innerHeight*.8)observer.observe(el);});
-   const cards=Array.from(document.querySelectorAll<HTMLElement>(".ingredient-tile,.catalog-card,.real-product,.pearl-exhibit"));
+   const cards=Array.from(document.querySelectorAll<HTMLElement>(".ingredient-tile,.catalog-card,.real-product,.pearl-exhibit,.owned-brand-card"));
    cards.forEach(el=>el.classList.add("motion-card"));
    let frame=0;
-   const photos=Array.from(document.querySelectorAll<HTMLElement>(".field-story>img,.about-photo img"));
+   const photos=Array.from(document.querySelectorAll<HTMLElement>(".field-story>img,.about-photo img,.heritage-image"));
    function update(){
     frame=0;
     const max=document.documentElement.scrollHeight-window.innerHeight;

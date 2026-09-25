@@ -62,7 +62,9 @@ The original `npm run build` remains the separate Vinext/Worker build; it is not
 - Email: **seapearlbiotech@gmail.com**.
 - Shop destination: set `STORE_URL` in `lib/commerce.ts`.
 - Products: `lib/products.ts` and `lib/product-research.ts`.
-- Hero video: `public/sea-to-spirulina.mp4`.
+- About-page hero video: `public/sea-to-spirulina.mp4` (muted autoplay, looping, with pause control).
+- Homepage hero: the original cultivation photo `public/original/PHOTO-2024-07-12-12-50-21.jpg`, with the original headline.
+- Goodluck (gluck) and Singest logos are original assets from the Sea Pearl WordPress media library, displayed before Our roots and on Our Brands. Brand enquiries currently lead to Contact.
 - Original media: `public/original/`.
 
 ## Before launch

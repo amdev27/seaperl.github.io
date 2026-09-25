@@ -256,3 +256,29 @@ body:has(.mobile-drawer.is-open) .live-chat{visibility:hidden}
 }
 @media(prefers-reduced-motion:reduce){.reading-progress{display:none}.motion-card,.motion-card:hover{transform:none!important}.button svg,.nav-cta svg,.round-arrow svg,.specimen-arrow svg{transform:none!important}}
 @media(hover:none){.motion-card:hover{transform:none;box-shadow:var(--neo-raised)}}
+
+/* The original cultivation photograph and typography, with a quiet modern frame. */
+.heritage-hero{position:relative;isolation:isolate;min-height:680px;height:calc(100svh - 128px);max-height:1100px;overflow:hidden;background:#334c3c;color:#fff}
+.heritage-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.heritage-hero:after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,transparent 45%,rgba(9,30,17,.32))}
+.heritage-copy{position:absolute;z-index:1;left:3%;right:3%;bottom:6%}
+.heritage-copy p{font-family:SeaPearlDisplay,"Arial Narrow",sans-serif;text-transform:uppercase;font-size:clamp(18px,1.6vw,32px);color:white;margin:0 0 18px;line-height:1.2}
+.heritage-copy h1{font-family:SeaPearlDisplay,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(70px,11.6vw,245px);line-height:.9;letter-spacing:-.015em;text-transform:uppercase;color:#fff;margin:0}
+.heritage-scroll{position:absolute;z-index:2;right:3%;top:30px;display:flex;gap:18px;align-items:center;border:1px solid #ffffff80;border-radius:30px;padding:10px 18px;background:#18352566;color:white;font-size:12px;backdrop-filter:blur(8px)}
+.heritage-scroll span{font-size:22px;transition:transform .3s}
+.heritage-scroll:hover span{transform:translateY(4px)}
+.owned-brands{scroll-margin-top:32px;padding-top:80px;padding-bottom:80px}
+.owned-brands .edit-heading{align-items:end;margin-bottom:38px}
+.owned-brands h2{margin:12px 0 0}
+.owned-brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.owned-brand-card{display:block;border-radius:28px;padding:26px;background:var(--pearl,#e9eee6);box-shadow:var(--neo-raised);border:1px solid #ffffffb0}
+.brand-number{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#516154}
+.owned-brand-logo{height:220px;display:flex;align-items:center;justify-content:center;margin:24px 0;border-radius:18px;background:white;box-shadow:inset 2px 2px 8px #16382008}
+.owned-brand-logo img{width:78%;height:80%;object-fit:contain;transition:scale .5s}
+.owned-brand-card:hover .owned-brand-logo img{scale:1.035}
+.brand-card-bottom{display:flex;justify-content:space-between;gap:16px;font-size:12px;line-height:1.5}
+.brand-card-bottom>span:last-child{color:#326747}
+.about-video-hero{width:min(1400px,calc(100% - 64px));margin:28px auto 0;border-radius:32px;box-shadow:var(--neo-raised)}
+@media(min-width:1500px){.heritage-hero{min-height:780px}}
+@media(max-width:700px){.heritage-hero{height:72svh;min-height:500px;max-height:800px}.heritage-copy{left:6%;right:6%;bottom:9%}.heritage-copy h1{font-size:clamp(68px,18vw,126px);max-width:550px}.heritage-copy p{font-size:20px;max-width:280px;line-height:1.25}.heritage-scroll{right:6%;top:22px}.owned-brands{padding-top:52px;padding-bottom:52px}.owned-brand-grid{grid-template-columns:1fr;gap:24px}.owned-brand-card{padding:22px}.owned-brand-logo{height:190px}.brand-card-bottom{font-size:11px}.about-video-hero{width:calc(100% - 32px);margin-top:16px;border-radius:20px}}
+@media(prefers-reduced-motion:reduce){.owned-brand-logo img,.heritage-scroll span{transition:none}.owned-brand-card:hover .owned-brand-logo img{scale:1}.heritage-image{transform:none!important}}
