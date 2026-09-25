@@ -1,5 +1,6 @@
 const imageNumbers:Record<string,string> = {spirulina:"001","spirulina-capsule":"006","spirulina-d2b12":"005","spirulina-flakes-granules":"002","spirulina-tablets":"004","frozen-spirulina":"003",phycocyanin:"009","phycocyanin-capsule":"010","omega-3":"011","omega-3-capsules":"012",astaxanthin:"007","astaxanthin-capsules":"008","beta-carotene":"015","squalene-powder":"014","vegan-protein-powder":"013"};
-export const productImage=(slug:string)=>`/original/Seapearl-Product-Images.${imageNumbers[slug]}.jpeg`;
+export const productImage=(slug:string)=>sitePath(`/original/Seapearl-Product-Images.${imageNumbers[slug]}.jpeg`);
+import { sitePath } from "./site-path";
 export type Product = { slug:string; name:string; form:string; applications:string[]; family:string; accent:string; note:string };
 
 export const products: Product[] = [

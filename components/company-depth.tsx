@@ -1,3 +1,4 @@
+import { sitePath } from "@/lib/site-path";
 import { Droplets, Sun, Waves, PackageCheck, FlaskConical, Leaf } from "lucide-react";
 
 export function CultivationStory(){return <section className="section cultivation-depth">
@@ -11,14 +12,14 @@ export function CultivationStory(){return <section className="section cultivatio
  <a className="source-caption" href="https://seapearlbiotech.com/about/" target="_blank" rel="noreferrer">Cultivation and processing information: Sea Pearl company profile ↗</a>
  </section>}
 
-export function IndustryDepth(){return <section className="section industry-depth"><div className="depth-heading"><p className="section-label">One ingredient. Many possibilities.</p><h2>Made for the world<br/><em>you’re developing.</em></h2><p>Sea Pearl supplies ingredients to a diverse group of industries. Start with your application; then discuss the format, specification and documentation it needs.</p><a className="text-link" href="/applications">Explore applications ↗</a></div><div className="industry-list">{[
+export function IndustryDepth(){return <section className="section industry-depth"><div className="depth-heading"><p className="section-label">One ingredient. Many possibilities.</p><h2>Made for the world<br/><em>you’re developing.</em></h2><p>Sea Pearl supplies ingredients to a diverse group of industries. Start with your application; then discuss the format, specification and documentation it needs.</p><a className="text-link" href={sitePath("/applications")}>Explore applications ↗</a></div><div className="industry-list">{[
  ["Food & beverage","Powders, flakes and extracts for food and drink development."],
  ["Nutraceuticals","Ingredient and finished-format discussions for supplement ranges."],
  ["Cosmetics & personal care","Specialty ingredients for formulation and evaluation."],
  ["Animal nutrition & agriculture","Explore ingredient suitability for feed and agricultural applications."]
- ].map(([title,text],i)=><a href="/applications" key={title}><span>0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div><span>↗</span></a>)}</div></section>}
+ ].map(([title,text],i)=><a href={sitePath("/applications")} key={title}><span>0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div><span>↗</span></a>)}</div></section>}
 
-export function CompanyFAQ(){return <section className="section company-faq"><div className="depth-heading"><p className="section-label">A little more clarity</p><h2>Before we<br/><em>start growing.</em></h2><p>Questions about our ingredients, processes and working together.</p><a className="text-link" href="/contact">Ask our team ↗</a></div><div className="faq-items">{[
+export function CompanyFAQ(){return <section className="section company-faq"><div className="depth-heading"><p className="section-label">A little more clarity</p><h2>Before we<br/><em>start growing.</em></h2><p>Questions about our ingredients, processes and working together.</p><a className="text-link" href={sitePath("/contact")}>Ask our team ↗</a></div><div className="faq-items">{[
  ["What does Sea Pearl Biotech do?","Founded in Ahmedabad in March 2016, Sea Pearl works in spirulina cultivation, manufacturing and marketing, ingredient supply and white-label product development."],
  ["Can you develop products for our own brand?","Our white-label services cover product and formulation discussions, packaging design and labelling. Share your intended market, preferred format and brand brief to discuss feasibility, quantities and timelines."],
  ["Which spirulina formats can I explore?","Our portfolio includes spirulina powder, flakes or granules, tablets, capsules and frozen spirulina, alongside specialty ingredients. Visit the ingredient catalogue for the complete range."],
@@ -32,4 +33,4 @@ export function WhiteLabelDepth(){return <section className="section white-label
  {icon:PackageCheck,title:"Packaging & labelling",text:"Explore packaging design, branding requirements and labelling needs for your target market."},
  {icon:Waves,title:"Production & logistics",text:"Discuss production requirements, inventory, shipping and distribution support as part of your brief."},
  {icon:Leaf,title:"A responsible approach",text:"Water conservation, resource efficiency and waste reduction are priorities described in our company’s sustainability mission."}
- ].map(({icon:Icon,title,text})=><article key={title}><div className="stage-symbol"><Icon size={24}/></div><h3>{title}</h3><p>{text}</p></article>)}</div><a className="button button-dark" href="/contact">Discuss your brand ↗</a></section>}
+ ].map(({icon:Icon,title,text})=><article key={title}><div className="stage-symbol"><Icon size={24}/></div><h3>{title}</h3><p>{text}</p></article>)}</div><a className="button button-dark" href={sitePath("/contact")}>Discuss your brand ↗</a></section>}
